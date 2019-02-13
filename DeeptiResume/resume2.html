@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Deepti Karambelkar | Welcome to my Online Resume & Portfolio</title>
+    <meta http-equiv="content-type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="author" content="Deepti Karambelkar" />
+    <meta name="description" content="Professional online resume of Deepti Karambelkar." />
+    <meta charset="utf-8">
+    <!--this-->
+    <link rel="shortcut icon" href="DeeptiResume/images/favicon.jpg" />
+    <script type='text/javascript' src='DeeptiResume/Scripts/jquery-1.11.3.js'></script>
+	<link rel="stylesheet" href="DeeptiResume/Styles/bootstrap.css">
+    <link rel="stylesheet" href="DeeptiResume/Styles/bootstrap-responsive.css">
+    <link rel="stylesheet" href="DeeptiResume/Styles/progressbar.css">
+    <link rel="stylesheet" href="DeeptiResume/Styles/styles.css">
+    <link rel="stylesheet" href="DeeptiResume/Styles/form-css.css">
+
+   <script type="text/JavaScript">
+       function postFormData() {
+
+           var errormessage = "";
+           var alertmessage = "Please fix the form errors:\n";
+
+           var first_name = document.getElementById("first_name").value;
+           var last_name = document.getElementById("last_name").value;
+           var email = document.getElementById("email").value;
+           var telephone = document.getElementById("telephone").value;
+           var comments = document.getElementById("comments").value;
+           //1. Validate First name
+           if (first_name == "" || first_name == null) {
+               errormessage = errormessage.concat("  - First Name cannot be blank.\n");
+           }
+
+           //2. Validate Last Name
+           if (last_name == "" || last_name == null) {
+               errormessage = errormessage.concat("  - Last Name cannot be blank.\n");
+           }
+
+           // Validate Email
+           if (email == "" || email == null) {
+               errormessage = errormessage.concat("  - Please enter a valid email.");
+           }
+
+
+
+           if (errormessage !== "") {
+               alertmessage = alertmessage.concat(errormessage);
+               alert(alertmessage);
+               return false;
+           }
+           else {
+
+               var dataString = 'firstname=' + first_name + '&lastname=' + last_name + '&email=' + email + '&message=' + comments + '&telephone=' + telephone;
+               $.ajax({
+                   type: "POST",
+                   url: "DeeptiResume/test.php",
+                   data: dataString,
+                   success: function (data) {
+                       alert(data);
+                   }
+               });
+           }
+
+       }
+</script>
+</head>
+<body oncontextmenu="return false">
+    <div class="wrapper">
+        <div class="container">
+            <div class="upbtnwrapp">
+                <div class="upbtn">
+                    <span class="icon-up-open-big"></span>
+                </div>
+            </div>
+            <!-- NAVIGATION -->
+            <nav class="site_nav" id="site_nav">
+<ul class="">
+<li><a href="#about_me">About</a></li>
+<li><a href="#my_expertise">Expertise</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+            <!-- /site_nav -->
+            <div id="aftermenuspace">
+            </div>
+            <!-- HEADER -->
+            <header class="site_header centerise borderbtn">
+<div id="logoline">
+<p>Deepti Karambelkar</p>
+</div>
+<h2>Software Engineer</h2>
+<p style="color:Gray; font-size:small">Welcome to my online resume & portfolio. Have a look around and contact me with any questions!</p>
+</header>
+            <!-- /site_header -->
+            <!-- end HEADER -->
+            <div class="container-fluid page">
+                <!-- ABOUT ME -->
+                <section class="row-fluid about_me" id="about_me">
+<aside class="span3 aside_el">
+<h2>About Me</h2>
+<h5>professional profile<br /> and contact info</h5>
+</aside>
+<article class="span6 borderleft par_el">
+<span class="circle"><img style="float:left; height: 84px; width: 84px;" src="DeeptiResume/images/deeptik.jpg" alt="" /></span> <p>
+<p><strong>Thanks for checking out my site!</strong></p>
+<p>This is a humble attempt at establishing my presence on the internet!</p>
+<p>I am a web developer with 10 plus years of experience in building small and medium scale web sites and window apps.
+I have greatly enjoyed the constant evolution of the internet industry over the last 10 years of my career in web techologies.
+I write in JavaScript, CSS, HTML, PHP and ASP.NET. I like working on scalability, performance, design, and backend processing.</p>
+<p>I consider myslef as a very enthusiastic web professional who is motivated by challenging projects and deadlines.</p>
+
+</article>
+<div class="span3 cont_info">
+<div class="soc">
+<ul>
+</ul>
+</div>
+<div class="info">
+<ul>
+<div class="contact-header">Location</div>
+<div class="contact-content">Mumbai, Maharashtra<br />India</div>
+<div class="contact-header">Contact</div>
+<div class="contact-content"><a href="mailto:deepti.karambelkar2015@gmail.com">deepti.karambelkar2015@gmail.com</a><br /> </div>
+</ul>
+<div class="download-button"><a href="DeeptiResume/Deepti_Karambelkar.docx" target="_blank" alt="Download Resume">Download Resume</a></div>
+</div>
+
+
+</div> <!-- /cont_info -->
+</section>
+                <!-- /about_me -->
+                <!-- end ABOUT ME -->
+                <!-- MY EXPERTISE -->
+                <section class="row-fluid my_expertise" id="my_expertise">
+<aside class="span3 aside_el">
+<h2>My Expertise</h2>
+<h5>skills that I'm<br /> proud of</h5>
+</aside>
+<article class="span4 borderleft par_el">
+<p><p>Here is a quick summary of my expereince.<br />
+I have used ASP.NET extensively for most of my projects and have picked up a good deal of expertise along the way. I am also well versed with PHP, HTML, CSS , AJAX and JQuery.<br />
+The backend I have mostly dealt with is SQL though I have also dabbled in DB2, Oracle quite a bit.<br />
+</p>
+</p>
+</article>
+<div class="span5 skill_level">
+<h4>ASP.NET</h4>
+<div class="progressbar percent_85">
+<div class="progressbar-inner"></div>
+</div>
+
+<h4>HTML</h4>
+<div class="progressbar percent_85">
+<div class="progressbar-inner"></div>
+</div>
+
+<h4>Javascript & JQuery</h4>
+<div class="progressbar percent_80">
+<div class="progressbar-inner"></div>
+</div>
+
+<h4>PHP</h4>
+<div class="progressbar percent_70">
+<div class="progressbar-inner"></div>
+</div>
+<h4>SQL Database</h4>
+<div class="progressbar percent_70">
+<div class="progressbar-inner"></div>
+</div>
+
+<h4>CSS</h4>
+<div class="progressbar percent_70">
+<div class="progressbar-inner"></div>
+</div>
+
+</div>
+
+
+
+</section>
+                <!-- /my_expertise -->
+                <!-- end MY EXPERTISE -->
+                <!-- EXPERIENCE -->
+                <section class="row-fluid experience" id="experience">
+<aside class="span3 aside_el">
+<h2>Experience</h2>
+<h5>My professional<br /> experience</h5>
+</aside>
+
+<div class="span9">
+<div class="row-fluid">
+<article class="span12 borderleft par_el in_spacing">
+<span class="period"> 2009 - Present</span>
+<div class="bigspacing">
+<header>
+<h2>Accenture Pvt Ltd.</h2>
+<h3>Team Lead</h3>
+</header>
+<p>
+My work involves designing and prototyping web applications, developing and hosting them. 
+I am also currently working as a Team Lead for a mid-sized Production Support project.<br />
+
+</p>
+</div>
+</article>
+</div>
+<div class="row-fluid">
+<article class="span12 borderleft par_el in_spacing">
+<span class="period"> 2006 - 2009</span>
+<div class="bigspacing">
+<header>
+<h2>Quinnox Consultancy Ltd.</h2>
+<h3>Software Consultant</h3>
+</header>
+<p>I started working for Quinnox right after graduation.<br />
+Most of my work here included developing web pages and windows utilities using C# and VB6<br />
+</p>
+</div>
+</article>
+</div>
+</div>
+
+</section>
+                <!-- /experience -->
+                <!-- end EXPERIENCE -->
+                <!-- EDUCATION -->
+                <section class="row-fluid education" id="education">
+<aside class="span3 aside_el">
+<h2>Education</h2>
+<h5>my education<br /> history</h5>
+</aside>
+
+<div class="span9">
+<div class="row-fluid">
+<article class="span12 borderleft par_el in_spacing">
+<span class="period"> 2002 - 2006</span>
+<div class="bigspacing">
+<header>
+<h2>Vidyalankar Institute of Technology - Mumbai University</h2>
+</header>
+<p>B.E in Information Technology</p>
+</div>
+</article>
+</div>
+
+</div>
+
+</section>
+                <!-- /education -->
+                <!-- end EDUCATION -->
+                <!-- Certificastions -->
+                <!-- end Certifications -->
+                <!-- Recommendations -->
+                <!-- end Recommendations -->
+                <!-- PORTFOLIO -->
+                <!-- end PORTFOLIO -->
+                <!-- BLOG -->
+                <section class="row-fluid blog" id="blog">
+<aside class="span3 aside_el">
+<h2>Blog</h2>
+<h5>latest posts</h5>
+</aside>
+
+
+
+<div class="span9">
+<div class="row-fluid">
+<article class="span12 borderleft par_el in_spacing">
+<span class="period">December 07</span>
+<div class="bigspacing">
+<header>
+<h2><a href="http://dpkarambelkar.com/DeeptiResume/bloglist.html">Welcome</a></h2>
+</header>
+<p>Welcome to my new online resume and portfolio! From time to time I will share thoughts in the form of blog posts. These posts could be about anything!
+- <a href="http://dpkarambelkar.com/DeeptiResume/bloglatest.html">Read Post</a></p>
+</div>
+</article>
+</div>
+<h5 style="float: right;"><a href="http://dpkarambelkar.com/DeeptiResume/bloglist.html">View All Posts</a></h5>
+</div>
+
+
+</section>
+                <!-- /blog -->
+                <!-- end BLOG -->
+            </div>
+            <!-- /page -->
+            <footer class="row-fluid siteFooter">
+<div id="contact">
+<aside class="span3 aside_el">
+<h2>Contact</h2>
+<h5>i'll get back with<br /> you ASAP</h5>
+</aside>
+<div class="span9 borderleft">
+
+
+<!-- Start Form -->
+<form id="contact-form" name="contact">
+<label for="first_name"><h4>First Name:</h4></label>
+<input type="text" name="first_name" id="first_name" required />
+
+<label for="last_name"><h4>Last Name:</h4></label>
+<input type="text" name="last_name" id="last_name" required />
+
+
+<label for="email"><h4>Email:</h4></label>
+<input type="text" name="email" id="email" required />
+
+<label for="telephone"><h4>Phone:</h4></label>
+<input type="text" name="telephone" id="telephone" />
+
+<label for="comments"><h4>Message:</h4></label>
+<textarea name="comments" id="comments" required></textarea>
+
+<br />
+<input type="hidden" name="submitted" id="submitted" value="true" />
+<input type="hidden" id="nonce_submit_contact" name="nonce_submit_contact" value="1cf1a62d8e" />
+<input type="hidden" name="_wp_http_referer" value="/" /> 
+
+<button type="button" class="contact-button pull-right" onclick="postFormData()">Send Message</button>
+</form>
+
+<div id="success-contact">
+<span>
+<p>Your message was sent successfully!</p>
+</span>
+</div>
+
+<div id="error-contact">
+<span>
+<p>Something went wrong, try refreshing and submitting the form again.</p>
+</span>
+</div>
+<!-- End Form -->
+
+
+
+</div>
+</div>
+</footer>
+            <div class="copyright">
+                &COPY; 2015, Deepti Karambelkar | Powered By Caffeine </div>
+        </div>
+        <!-- /container -->
+    </div>
+    
+    <!-- End Form Scripts -->
+    <script>
+$(window).on('load resize', function () {
+current_width = $(window).width();
+if ( current_width < 767 ) {
+$("br").hide();
+} else {
+$("br").show();
+}
+});
+
+// Cache selectors
+if ( $(window).width() > 940 ) {
+var lastId,
+topMenu = $("#site_nav")
+topMenuHeight = topMenu.outerHeight()+40,
+// All list items
+menuItems = topMenu.find("a"),
+// Anchors corresponding to menu items
+scrollItems = menuItems.map(function(){
+var item = $($(this).attr("href"));
+if (item.length) { return item; }
+});
+} else {
+var lastId,
+topMenu = $("#site_nav")
+topMenuHeight = topMenu.outerHeight()-140,
+// All list items
+menuItems = topMenu.find("a"),
+// Anchors corresponding to menu items
+scrollItems = menuItems.map(function(){
+var item = $($(this).attr("href"));
+if (item.length) { return item; }
+});
+
+}
+
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+var href = $(this).attr("href"),
+offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+$('html, body').stop().animate({
+scrollTop: offsetTop
+}, 300);
+e.preventDefault();
+});
+
+
+// Bind to scroll
+$(window).scroll(function(){
+// Get container scroll position
+var fromTop = $(this).scrollTop()+topMenuHeight;
+
+// Get id of current scroll item
+var cur = scrollItems.map(function(){
+if ($(this).offset().top < fromTop)
+return this;
+});
+// Get the id of the current element
+cur = cur[cur.length-1];
+var id = cur && cur.length ? cur[0].id : "";
+
+if (lastId !== id) {
+lastId = id;
+// Set/remove active class
+menuItems
+.parent().removeClass("active")
+.end().filter("[href=#"+id+"]").parent().addClass("active");
+}
+});// $('.scrollup').fadeIn();
+
+$(window).scroll(function(){
+var pos = $(window).scrollTop();
+if (pos > 55 && current_width > 940) {
+$(".site_nav").css({
+"position": "fixed",
+"top": "0",
+"width": "940px",
+"margin-bottom": "55px",
+});
+$("#aftermenuspace").css({
+"height": "55px",
+});
+} else {
+$(".site_nav").css({
+"position": "relative",
+"margin-bottom": "0",
+"width": "100%",
+});
+$("#aftermenuspace").css({
+"height": "0",
+});
+}
+if ( pos > 600 ) { $('.upbtn').fadeIn();} else { $('.upbtn').fadeOut(); }
+});
+
+$('.upbtn').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+
+//create the slider
+$('.cd-testimonials-wrapper').flexslider({
+selector: ".cd-testimonials > li",
+animation: "slide",
+controlNav: false,
+slideshow: false,
+smoothHeight: true,
+start: function(){
+$('.cd-testimonials').children('li').css({
+'opacity': 1,
+'position': 'relative'
+});
+}
+});
+
+</script>
+
+</body>
+</html>

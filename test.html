@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Test Page</title>
+<script type='text/javascript' src='DeeptiResume/Scripts/jquery-1.11.3.js'></script>
+   <script type="text/JavaScript">
+function postFormData()
+{
+ var errormessage = "";
+           var alertmessage = "Please fix the form errors:\n";
+
+           var first_name = document.getElementById("first_name").value;
+           var last_name = document.getElementById("last_name").value;
+           var email = document.getElementById("email").value;
+           var telephone = document.getElementById("telephone").value;
+           var comments = document.getElementById("comments").value;
+           
+           //1. Validate First name
+           if (first_name == "" || first_name == null) {
+               errormessage = errormessage.concat("  - First Name cannot be blank.\n");
+           }
+
+           //2. Validate Last Name
+           if (last_name == "" || last_name == null) {
+               errormessage = errormessage.concat("  - Last Name cannot be blank.\n");
+           }
+
+           // Validate Email
+           if (email == "" || email == null) {
+               errormessage = errormessage.concat("  - Please enter a valid email.");
+           }
+           
+           if (errormessage !== "") {
+               alertmessage = alertmessage.concat(errormessage);
+               alert(alertmessage);
+               return false;
+           }
+           else
+           { 
+           
+           
+           var dataString = 'firstname=' + first_name + '&lastname=' + last_name + '&email=' + email + '&message=' + comments + '&telephone=' + telephone;
+           
+                   $.ajax({
+                   type: "POST",
+                   url: "DeeptiResume/test.php",
+                   data: dataString,
+                   success: function (data) {
+                       alert(data);
+                   }
+               });
+           
+           
+           
+           }
+           
+
+}
+
+function postFormData1() {
+
+           var errormessage = "";
+           var alertmessage = "Please fix the form errors:\n";
+
+           var first_name = document.getElementById("first_name").value;
+           var last_name = document.getElementById("last_name").value;
+           var email = document.getElementById("email").value;
+           var telephone = document.getElementById("telephone").value;
+           var comments = document.getElementById("comments").value;
+           
+           //1. Validate First name
+           if (first_name == "" || first_name == null) {
+               errormessage = errormessage.concat("  - First Name cannot be blank.\n");
+           }
+
+           //2. Validate Last Name
+           if (last_name == "" || last_name == null) {
+               errormessage = errormessage.concat("  - Last Name cannot be blank.\n");
+           }
+
+           // Validate Email
+           if (email == "" || email == null) {
+               errormessage = errormessage.concat("  - Please enter a valid email.");
+           }
+
+
+
+           if (errormessage !== "") {
+               alertmessage = alertmessage.concat(errormessage);
+               alert(alertmessage);
+               return false;
+           }
+           else {
+
+               var dataString = 'firstname=' + first_name + '&lastname=' + last_name + '&email=' + email + '&message=' + comments + '&telephone=' + telephone;
+               $.ajax({
+                   type: "POST",
+                   url: "DeeptiResume/test.php",
+                   data: dataString,
+                   success: function (data) {
+                       alert(data);
+                   }
+               });
+           }
+
+       }
+</script>
+</head>
+<body>
+<!-- Start Form -->
+<form id="contact-form" name="contact">
+<label for="first_name"><h4>First Name:</h4></label>
+<input type="text" name="first_name" id="first_name" required />
+
+<label for="last_name"><h4>Last Name:</h4></label>
+<input type="text" name="last_name" id="last_name" required />
+
+
+<label for="email"><h4>Email:</h4></label>
+<input type="text" name="email" id="email" required />
+
+<label for="telephone"><h4>Phone:</h4></label>
+<input type="text" name="telephone" id="telephone" />
+
+<label for="comments"><h4>Message:</h4></label>
+<textarea name="comments" id="comments" required></textarea>
+
+<br />
+<button type="button" class="contact-button pull-right" onclick="postFormData()">Send Message</button>
+</form>
+</body>
+</html>
